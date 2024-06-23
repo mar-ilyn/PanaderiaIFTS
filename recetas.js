@@ -25,6 +25,7 @@ function myFunction(x) {
     } else {
         menuImg.style.display= "none";
       menu.style.display = "flex";
+        navHome.style.width = "30%";
       nav.style.justifyContent= "left";
       li.forEach(item => {
         item.style.height = ""; // Restaura las alturas originales de los elementos li
