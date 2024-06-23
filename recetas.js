@@ -1,4 +1,5 @@
 const menu = document.querySelector(".menu-nav");
+const navHome = document.querySelector(".nav-home");
 const nav = document.querySelector("nav");
 const li = document.querySelectorAll("li");
 const menuImg = document.querySelector(".menu-img");
