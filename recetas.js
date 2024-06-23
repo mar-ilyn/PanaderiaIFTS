@@ -26,7 +26,7 @@ function myFunction(x) {
     } else {
         menuImg.style.display= "none";
       menu.style.display = "flex";
-        navHome.style.width = "30%";
+      navHome.style.width = "30%";
       nav.style.justifyContent= "left";
       li.forEach(item => {
         item.style.height = ""; // Restaura las alturas originales de los elementos li
@@ -108,5 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const receta = localStorage.getItem('receta');
     if (receta) {
         contenedorRecetas.innerHTML = receta;
+
     }
 });
+
