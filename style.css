@@ -168,7 +168,7 @@ h2{
   font-size: 1.7rem;
   text-align: center;
   margin: 0;
-  margin-bottom: 2%;
+  padding-bottom: 2%;
   color: rgb(88, 59, 40);
   text-shadow: 0 0 7px rgba(241, 168, 137, 0.559);
 }
@@ -189,8 +189,8 @@ h2{
 }
 
 .cont-rec{
-    height: 75%;
-    width: 50%;
+    height: 85%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     padding: 5%;
@@ -205,7 +205,7 @@ h2{
 .carousel {
     height: 80%;
     max-width: 50%; /* Establece el ancho máximo del carrusel */
-    margin: 0 auto; /* Centra horizontalmente el carrusel */
+    margin: 5% auto 0; /* Centra horizontalmente el carrusel */
     z-index: 0;
   }
 
@@ -227,6 +227,7 @@ h2{
 h3{
     font-size: 1.2rem;
     color: rgb(103, 71, 50);
+    padding-top: 5%;
 }
 
 .cont-img{
@@ -236,8 +237,9 @@ h3{
     overflow: hidden;
 }
 
-main div img{
+.cont-img img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -245,17 +247,23 @@ main div img{
     display: inline-block;
     font-family: "Rubik", sans-serif;
     width: 80%;
-    background-color: #dcbaa4;
     color: rgb(103, 71, 50);
-    padding: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #dcbaa4;
     border-radius: 0.5rem;
     cursor: pointer;
-    font-size: 1rem;
     transition: all 0.2s;
     border: none;
+    padding: 0.5rem;
 }
 
 .btn-rec:hover{
+    background-color: rgb(103, 71, 50);
+    color: #fadecc;
+}
+
+.btn-rec a:hover{
     background-color: rgb(103, 71, 50);
     color: #fadecc;
 }
@@ -370,8 +378,115 @@ h4{
 footer{
     text-align: center;
     background-color: rgb(103, 71, 50);
-    height: 10%;
+    height: 15vh;
     color: #dedede;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes{
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+    margin: auto;
+    row-gap: 1rem;
+}
+
+.red{
+    height: 100%;
+}
+
+.red-img{
+    height: 70%;
+}
+
+/*recetas.html*/
+
+.main-recetas{
+    padding: 6% 5% 5% 5%;
+}
+
+.titulo-recetas{
+    font-weight: 900;
+    font-size: 2rem;
+    display: inline-block;
+    width: 100%;
+  font-family: "Playwrite NL", cursive;
+  margin: 1% auto 0;
+  text-align: center;
+  color: rgb(88, 59, 40);
+  text-shadow: 0 0 5px rgba(241, 168, 137, 0.559);
+  grid-row: 1/2;
+    grid-column: 1/5;
+}
+
+.main-recetas li{
+    list-style: none;
+    font-size: 1.2rem;
+    padding-bottom: 1%;
+}
+
+.main-recetas ul{
+    padding: 0 0 0 2%;
+}
+
+.contenedor-receta{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    padding: 5%;
+    background-color: rgba(255, 255, 255, 0.512);
+    border-radius: 1rem;
+}
+
+.contenedor-receta h2{
+    font-weight: 900;
+    text-align: left;
+    font-size: 1.7rem;
+}
+
+.contenedor-receta h5{
+    display: inline-block;
+    background-color: #fde0cc;
+    padding: 0.5rem 0.7rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 0.5rem rgba(81, 81, 81, 0.578);
+    color: rgb(88, 59, 40);
+    margin-right: 1%;
+}
+
+.receta-img{
+    width: 100%;
+    object-fit: cover;
+    grid-row: 2/4;
+    grid-column: 1/2;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgb(53, 53, 53);
+}
+
+.ingredientes{
+    padding: 1% 0;
+    grid-row: 4/8;
+    grid-column: 1/2;
+}
+
+.ingredientes h2{
+    font-size: 1.5rem;
+}
+
+.ingredientes li{
+    font-size: 1.1rem;
+}
+
+.pasos{
+    padding: 0 0 0 4%;
+    grid-row: 2/8;
+    grid-column: 2/5;
 }
 
 @media screen and (max-width: 1024px) {
@@ -402,6 +517,46 @@ footer{
     }
     table{
         width: 70%;
+    }
+
+    .redes{
+        width: 50%;
+    }
+
+    /*recetas.html*/
+
+    .main-recetas{
+        padding-top: 15%;
+    }
+
+    .contenedor-receta{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 3fr 10fr;
+        padding: 5%;
+        background-color: rgba(255, 255, 255, 0.512);
+        border-radius: 1rem;
+    }
+
+    .titulo-recetas{
+        grid-row: 1/2;
+        grid-column: 1/5;
+    }
+
+    .receta-img{
+        grid-row: 2/3;
+        grid-column: 2/4;
+        margin-bottom: 4%;
+    }
+
+    .ingredientes{
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+
+    .pasos{
+        grid-row: 3/4;
+        grid-column: 2/5;
     }
   }
 
@@ -439,7 +594,7 @@ footer{
 
     #recetas{
         margin-top: 10%;
-        height: 200vh;
+        height: 220vh;
     }
 
     .recetas{
@@ -471,32 +626,58 @@ footer{
     .contacto{
         height: 60vh;
     }
+
+    /*recetas.html*/
+
+    .contenedor-receta{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 4fr 10fr;
+    }
+
+    .receta-img{
+        grid-column: 1/5;
+    }
+    
   }
 
   @media screen and (max-width: 710px){
+
     #recetas{
-        height: 180vh;
+        height: 200vh;
+    }
+
+    /*recetas.html*/
+
+    .contenedor-receta{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 5fr 16fr;
     }
   }
 
   @media screen and (max-width: 625px){
 
     #recetas{
-        height: 160vh;
+        height: 180vh;
     }
 
     form{
         width: 90%;
+    }
+
+    /*recetas.html*/
+
+    .contenedor-receta{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 4fr 16fr;
     }
   }
 
   @media screen and (max-width: 576px){
     .home img{
         height: 40vh;
-    }
-
-    #recetas{
-        height: 155vh;
     }
 
     table{
@@ -513,6 +694,44 @@ footer{
 
     .contacto{
         height: 55vh;
+    }
+
+    /*recetas.html*/
+
+    .main-recetas{
+        padding-top: 20%;
+    }
+
+    .contenedor-receta{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 4fr 6fr 10fr;
+    }
+
+    .titulo-recetas{
+        font-size: 1.5rem;
+    }
+
+    .ingredientes{
+        grid-column: 1/5;
+        grid-row: 3/4;
+    }
+
+    .contenedor-receta h2{
+        font-size: 1.2rem;
+    }
+
+    .ingredientes li, .pasos li {
+        font-size: 1rem;
+    }
+
+    h5{
+        font-size: 1rem;
+    }
+
+    .pasos{
+        grid-column: 1/5;
+        grid-row: 4/5;
     }
   }
 
@@ -547,6 +766,26 @@ footer{
     }
 
     #recetas{
+        height: 170vh;
+    }
+
+    /*recetas.html*/
+    .p-pasos li{
+        font-size: 1;
+    }
+  }
+
+  @media screen and (max-width: 490px){
+    #recetas{
         height: 150vh;
     }
+
+    /*recetas.html*/
+
+    .contenedor-receta{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 3fr 5fr 10fr;
+    }
+
   }
